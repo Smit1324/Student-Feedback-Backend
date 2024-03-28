@@ -4,4 +4,4 @@ dotenv.config({
     path: './.env'
 });
 
-require('./app')
+require('./db/conn')
