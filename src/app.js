@@ -10,9 +10,15 @@ app.use(cors({
 }));
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true, limit: "16kb"}));
+app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 app.use(cookieParser());
+
+const studentRoutes = require("./routes/student.routes")
+const facultyRoutes = require("./routes/faculty.routes")
+
+app.use("/api/v1/student", studentRoutes)
+app.use("/api/v1/faculty", facultyRoutes)
 
 const PORT = process.env.PORT || 3000;
 
