@@ -8,5 +8,5 @@ mongoose.connect(`${process.env.MONGODB_URI}`)
     }
     )
     .catch((err) => {
-        console.log(`CCONNECTION FAILED : ${err}`);
+        console.log(`CONNECTION FAILED : ${err}`);
     })
